@@ -128,9 +128,10 @@ public class TicTacToe extends Application {
             if (isFull() && whoseTurn != 'E') {
                 lblStatus.setText("Draw !! The game is over.");
                 lblStatus.setTextFill(Color.GOLD.darker());
+                whoseTurn = 'D';
             }
 
-            if (isWon(whoseTurn)) {
+            if (isWon(whoseTurn) && whoseTurn != 'D') {
                 if (whoseTurn == 'X') {
                     lblStatus.setText("O HAS WIN !!");
                 } else if (whoseTurn == 'O') {
