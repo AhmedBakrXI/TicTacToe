@@ -125,7 +125,7 @@ public class TicTacToe extends Application {
 
             this.token = whoseTurn;
 
-            if (isFull()) {
+            if (isFull() && whoseTurn != 'E') {
                 lblStatus.setText("Draw !! The game is over.");
                 lblStatus.setTextFill(Color.GOLD.darker());
             }
