@@ -125,12 +125,6 @@ public class TicTacToe extends Application {
 
             this.token = whoseTurn;
 
-            if (isFull() && whoseTurn != 'E') {
-                lblStatus.setText("Draw !! The game is over.");
-                lblStatus.setTextFill(Color.GOLD.darker());
-                whoseTurn = 'D';
-            }
-
             if (isWon(whoseTurn) && whoseTurn != 'D') {
                 if (whoseTurn == 'X') {
                     lblStatus.setText("O HAS WIN !!");
@@ -141,6 +135,11 @@ public class TicTacToe extends Application {
                 whoseTurn = 'E';
             }
 
+            if (isFull() && whoseTurn != 'E') {
+                lblStatus.setText("Draw !! The game is over.");
+                lblStatus.setTextFill(Color.GOLD.darker());
+                whoseTurn = 'D';
+            }
         }
     }
 }
